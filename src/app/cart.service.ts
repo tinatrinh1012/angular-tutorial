@@ -7,6 +7,7 @@ import { Product } from './products';
 })
 export class CartService {
   // PROPERTY
+  // list of products in cart
   items: Product[] = [];
 
   // CONSTRUCTOR

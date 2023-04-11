@@ -4,7 +4,7 @@
   <h3>
     <a
       [title]="product.name + ' details'"
-      [routerLink]="['/products', product.id]"
+      [routerLink]="['products', product.id]"
     >
       {{ product.name }}
     </a>
@@ -12,11 +12,13 @@
 
   <p *ngIf="product.description">Description: {{ product.description }}</p>
 
-  <button type="button" (click)="share()">Share</button>
+  <!-- share() method defined in component class -->
+  <button type="button" (click)="share(product)">Share</button>
 
+  <!-- onNotify() method defined in component class -->
   <app-product-alerts
     [product]="product"
-    (notify)="onNotify()"
+    (notify)="onNotify(product)"
   ></app-product-alerts>
 </div>
 

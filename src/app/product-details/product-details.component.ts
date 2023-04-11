@@ -20,6 +20,8 @@ export class ProductDetailsComponent implements OnInit {
   ) {}
 
   // METHODS
+
+  // initialize product property when page first load
   ngOnInit() {
     // First get the product id from the current route.
     const routeParams = this.route.snapshot.paramMap;
@@ -32,6 +34,7 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   addToCart(product: Product) {
+    // cartService imported from CartService
     this.cartService.addToCart(product);
     window.alert('Your product has been added to the cart!');
   }

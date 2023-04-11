@@ -10,6 +10,8 @@ import { CartService } from '../cart.service';
 export class CartComponent {
   // PROPERTY
   items = this.cartService.getItems();
+
+  // FormBuilder helps bind user input form data to checkoutForm value
   checkoutForm = this.formBuilder.group({
     name: '',
     address: '',

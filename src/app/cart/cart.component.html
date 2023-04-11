@@ -4,6 +4,7 @@
   <a routerLink="/shipping">Shipping Prices</a>
 </p>
 
+<!-- items property initilized in CartComponent class through calling CartService -->
 <div class="cart-item" *ngFor="let item of items">
   <span>{{ item.name }}</span>
   <span>{{ item.price | currency }}</span>

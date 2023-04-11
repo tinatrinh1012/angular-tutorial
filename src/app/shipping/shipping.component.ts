@@ -15,6 +15,8 @@ export class ShippingComponent {
   constructor(private cartService: CartService) {}
 
   // METHODS
+
+  // initialize shippingCosts property by fetching json data using CartService
   ngOnInit(): void {
     this.shippingCosts = this.cartService.getShippingPrices();
   }

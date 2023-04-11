@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-
-import { products } from '../products';
+import { Product } from '../products';
+import { products } from '../products'; // in typical app, fetch products data from API
 
 @Component({
   selector: 'app-product-list',
@@ -8,14 +8,15 @@ import { products } from '../products';
   styleUrls: ['./product-list.component.css'],
 })
 export class ProductListComponent {
+  // this variable can be accessed from html template
   products = products;
 
-  share() {
-    window.alert('The product has been shared!');
+  share(product: Product) {
+    window.alert(`${product.name} has been shared!`);
   }
 
-  onNotify() {
-    window.alert('You will be notified when the product goes on sale');
+  onNotify(product: Product) {
+    window.alert(`You will be notified when ${product.name} goes on sale`);
   }
 }
 
